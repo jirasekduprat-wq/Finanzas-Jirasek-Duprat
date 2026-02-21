@@ -1,18 +1,11 @@
 {
-  "name": "finanzas-tracker",
+  "name": "my-package",
   "version": "1.0.0",
-  "private": true,
+  "description": "A sample package",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "test": "echo 'Error: no test specified' && exit 1"
   },
-  "dependencies": {
-    "next": "latest",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "@supabase/supabase-js": "^2.38.0",
-    "date-fns": "^2.30.0",
-    "lucide-react": "^0.263.0"
-  }
+  "author": "Your Name",
+  "license": "ISC"
 }
