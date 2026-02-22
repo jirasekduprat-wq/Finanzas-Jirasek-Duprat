@@ -137,6 +137,7 @@ export default function SeguimientoPage() {
               <th className="text-right px-4 py-3">Monto</th>
               <th className="text-center px-4 py-3">Estado</th>
               <th className="text-right px-4 py-3">Pagado</th>
+              <th className="text-right px-4 py-3">Pendiente</th>
               <th className="px-4 py-3">Progreso</th>
             </tr>
           </thead>
@@ -209,6 +210,11 @@ export default function SeguimientoPage() {
                       {formatGuarani(paidAmount)}
                     </span>
                   </td>
+                  <td className="px-4 py-3 text-right font-mono">
+                    <span className={expense.amount - paidAmount > 0 ? 'text-red-600' : 'text-green-700'}>
+                      {formatGuarani(expense.amount - paidAmount)}
+                    </span>
+                  </td>
                   <td className="px-4 py-3 min-w-[100px]">
                     <div className="flex items-center gap-2">
                       <div className="flex-1 bg-gray-200 rounded-full h-2">
@@ -229,7 +235,7 @@ export default function SeguimientoPage() {
             })}
             {expenses.length === 0 && (
               <tr>
-                <td colSpan={5} className="px-4 py-6 text-center text-gray-400">
+                <td colSpan={6} className="px-4 py-6 text-center text-gray-400">
                   No hay gastos. Agregá ítems en la página de Gastos.
                 </td>
               </tr>
@@ -241,6 +247,7 @@ export default function SeguimientoPage() {
               <td className="px-4 py-3 text-right text-blue-700 font-mono">{formatGuarani(totalExpenses)}</td>
               <td></td>
               <td className="px-4 py-3 text-right text-green-700 font-mono">{formatGuarani(totalPaid)}</td>
+              <td className="px-4 py-3 text-right text-red-600 font-mono">{formatGuarani(totalRemaining)}</td>
               <td className="px-4 py-3 text-xs text-gray-500 text-right">{paidPercent}% pagado</td>
             </tr>
           </tfoot>
