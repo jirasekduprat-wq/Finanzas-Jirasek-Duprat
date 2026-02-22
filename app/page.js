@@ -67,14 +67,14 @@ export default function Home() {
       {/* Add form */}
       <form onSubmit={handleAdd} className="bg-white rounded-xl shadow p-5 mb-6 flex flex-col sm:flex-row gap-3">
         <input
-          className="border border-gray-300 rounded-lg px-3 py-2 flex-1 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          className="border border-gray-300 rounded-lg px-3 py-2 flex-1 focus:outline-none focus:ring-2 focus:ring-blue-400"
           placeholder="Nombre del gasto"
           value={newName}
           onChange={(e) => setNewName(e.target.value)}
         />
         <input
           type="number"
-          className="border border-gray-300 rounded-lg px-3 py-2 w-40 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+          className="border border-gray-300 rounded-lg px-3 py-2 w-40 focus:outline-none focus:ring-2 focus:ring-blue-400"
           placeholder="Monto (Gs.)"
           value={newAmount}
           onChange={(e) => setNewAmount(e.target.value)}
@@ -82,7 +82,7 @@ export default function Home() {
         />
         <button
           type="submit"
-          className="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg px-5 py-2 transition-colors"
+          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg px-5 py-2 transition-colors"
         >
           + Agregar
         </button>
@@ -92,7 +92,7 @@ export default function Home() {
       {/* Expenses list */}
       <div className="bg-white rounded-xl shadow overflow-hidden">
         <table className="w-full text-sm">
-          <thead className="bg-indigo-50 text-indigo-700 uppercase text-xs">
+          <thead className="bg-blue-50 text-blue-700 uppercase text-xs">
             <tr>
               <th className="text-left px-4 py-3">Nombre</th>
               <th className="text-right px-4 py-3">Monto</th>
@@ -106,13 +106,13 @@ export default function Home() {
                   <td colSpan={3} className="px-4 py-2">
                     <form onSubmit={handleSaveEdit} className="flex gap-2 items-center">
                       <input
-                        className="border border-gray-300 rounded px-2 py-1 flex-1 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                        className="border border-gray-300 rounded px-2 py-1 flex-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
                         value={editName}
                         onChange={(e) => setEditName(e.target.value)}
                       />
                       <input
                         type="number"
-                        className="border border-gray-300 rounded px-2 py-1 w-36 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                        className="border border-gray-300 rounded px-2 py-1 w-36 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
                         value={editAmount}
                         onChange={(e) => setEditAmount(e.target.value)}
                         min="1"
@@ -132,7 +132,7 @@ export default function Home() {
                     <td className="px-4 py-3 text-right whitespace-nowrap">
                       <button
                         onClick={() => startEdit(expense)}
-                        className="text-indigo-500 hover:text-indigo-700 mr-3 text-xs font-medium"
+                        className="text-blue-500 hover:text-blue-700 mr-3 text-xs font-medium"
                       >
                         Editar
                       </button>
@@ -155,10 +155,10 @@ export default function Home() {
               </tr>
             )}
           </tbody>
-          <tfoot className="bg-indigo-50 font-bold">
+          <tfoot className="bg-blue-50 font-bold">
             <tr>
-              <td className="px-4 py-3 text-indigo-700">Total</td>
-              <td className="px-4 py-3 text-right text-indigo-700 font-mono">{formatGuarani(total)}</td>
+              <td className="px-4 py-3 text-blue-700">Total</td>
+              <td className="px-4 py-3 text-right text-blue-700 font-mono">{formatGuarani(total)}</td>
               <td></td>
             </tr>
           </tfoot>

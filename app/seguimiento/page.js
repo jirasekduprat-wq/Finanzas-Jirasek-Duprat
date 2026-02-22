@@ -81,7 +81,7 @@ export default function SeguimientoPage() {
         <div className="flex items-center gap-2">
           <label className="text-sm font-medium text-gray-700">Mes:</label>
           <select
-            className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
             value={month}
             onChange={(e) => setMonth(Number(e.target.value))}
           >
@@ -93,7 +93,7 @@ export default function SeguimientoPage() {
         <div className="flex items-center gap-2">
           <label className="text-sm font-medium text-gray-700">Año:</label>
           <select
-            className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+            className="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
             value={year}
             onChange={(e) => setYear(Number(e.target.value))}
           >
@@ -102,7 +102,7 @@ export default function SeguimientoPage() {
             ))}
           </select>
         </div>
-        <span className="text-indigo-700 font-semibold">
+        <span className="text-blue-700 font-semibold">
           {MONTHS[month - 1]} {year}
         </span>
       </div>
@@ -118,11 +118,11 @@ export default function SeguimientoPage() {
       <div className="bg-white rounded-xl shadow p-4 mb-6">
         <div className="flex justify-between text-sm font-medium mb-1">
           <span className="text-gray-700">Progreso general</span>
-          <span className="text-indigo-700">{paidPercent}%</span>
+          <span className="text-blue-700">{paidPercent}%</span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-3">
           <div
-            className="bg-indigo-500 h-3 rounded-full transition-all duration-500"
+            className="bg-blue-600 h-3 rounded-full transition-all duration-500"
             style={{ width: `${paidPercent}%` }}
           />
         </div>
@@ -131,7 +131,7 @@ export default function SeguimientoPage() {
       {/* Expense rows */}
       <div className="bg-white rounded-xl shadow overflow-hidden">
         <table className="w-full text-sm">
-          <thead className="bg-indigo-50 text-indigo-700 uppercase text-xs">
+          <thead className="bg-blue-50 text-blue-700 uppercase text-xs">
             <tr>
               <th className="text-left px-4 py-3">Gasto</th>
               <th className="text-right px-4 py-3">Monto</th>
@@ -235,10 +235,10 @@ export default function SeguimientoPage() {
               </tr>
             )}
           </tbody>
-          <tfoot className="bg-indigo-50 font-bold text-sm">
+          <tfoot className="bg-blue-50 font-bold text-sm">
             <tr>
-              <td className="px-4 py-3 text-indigo-700">Total</td>
-              <td className="px-4 py-3 text-right text-indigo-700 font-mono">{formatGuarani(totalExpenses)}</td>
+              <td className="px-4 py-3 text-blue-700">Total</td>
+              <td className="px-4 py-3 text-right text-blue-700 font-mono">{formatGuarani(totalExpenses)}</td>
               <td></td>
               <td className="px-4 py-3 text-right text-green-700 font-mono">{formatGuarani(totalPaid)}</td>
               <td className="px-4 py-3 text-xs text-gray-500 text-right">{paidPercent}% pagado</td>
